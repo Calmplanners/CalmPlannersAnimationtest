@@ -2,28 +2,28 @@
 import PackageDescription
 
 let package = Package(
-    name: "CalmPlannersAnimation",
+    name: "Calmplannersanimaton",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_15)
     ],
     products: [
         .library(
-            name: "CalmPlannersAnimation",
-            targets: ["CalmPlannersAnimation"]),
+            name: "Calmplannersanimaton",
+            targets: ["Calmplannersanimaton"]),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "CalmPlannersAnimation",
+            name: "Calmplannersanimaton",
             dependencies: [],
-            path: "Sources/Calmplannersanimation",
+            path: "Sources/Calmplannersanimaton",
             resources: [
-                .process("Resources/animation.gif") // Adjust the path to your GIF file
+                .process("Untitleddesign(12).gif") // Ensure this path is correct
             ]
         ),
         .testTarget(
-            name: "CalmPlannersAnimationTests",
-            dependencies: ["CalmPlannersAnimation"]),
+            name: "CalmplannersanimatonTests",
+            dependencies: ["Calmplannersanimaton"]),
     ]
 )
