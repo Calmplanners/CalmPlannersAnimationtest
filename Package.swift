@@ -1,23 +1,29 @@
-// swift-tools-version: 5.10
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
-    name: "Calmplannersanimaton",
-    products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "Calmplannersanimaton",
-            targets: ["Calmplannersanimaton"]),
+    name: "CalmPlannersAnimation",
+    platforms: [
+        .iOS(.v13),
+        .macOS(.v10_15)
     ],
+    products: [
+        .library(
+            name: "CalmPlannersAnimation",
+            targets: ["CalmPlannersAnimation"]),
+    ],
+    dependencies: [],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Calmplannersanimaton"),
+            name: "CalmPlannersAnimation",
+            dependencies: [],
+            path: "Sources/Calmplannersanimation",
+            resources: [
+                .process("Resources/animation.gif") // Adjust the path to your GIF file
+            ]
+        ),
         .testTarget(
-            name: "CalmplannersanimatonTests",
-            dependencies: ["Calmplannersanimaton"]),
+            name: "CalmPlannersAnimationTests",
+            dependencies: ["CalmPlannersAnimation"]),
     ]
 )
